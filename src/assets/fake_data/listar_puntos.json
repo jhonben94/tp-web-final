@@ -1,0 +1,25 @@
+{
+  "lista": [
+    {
+      "idPunto": 1,
+      "concepto": "0 a 199.999 Gs",
+      "puntosRequeridos": 50000,
+      "rangoInicial": 0,
+      "rangoFinal": 199999
+    },
+    {
+      "idPunto": 2,
+      "concepto": "200.000 Gs. a 499.999",
+      "puntosRequeridos": 30000,
+      "rangoInicial": 200000,
+      "rangoFinal": 499999
+    },
+    {
+      "idPunto": 2,
+      "concepto": "200.000 Gs. a 499.999",
+      "puntosRequeridos": 30000,
+      "rangoInicial": 500000
+    }
+  ],
+  "total": 2
+}

@@ -1,0 +1,88 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header card-header-primary card-header-icon">
+        <div class="card-icon">
+          <i class="material-icons">date_range</i>
+        </div>
+        <h4 class="card-title">
+          <strong>{{ titulo }}</strong>
+        </h4>
+      </div>
+
+      <form [formGroup]="form" (keydown.enter)="$event.preventDefault()">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6">
+              <mat-form-field>
+                <input
+                  matInput
+                  [matDatepicker]="picker"
+                  placeholder="FECHA INICIO"
+                  formControlName="fechaInicioValidez"
+                  (click)="picker.open()"
+                  required
+                />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="picker"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+
+              <mat-form-field>
+                <input
+                  matInput
+                  [matDatepicker]="picker2"
+                  placeholder="FECHA FIN"
+                  formControlName="fechaFinValidez"
+                  (click)="picker2.open()"
+                  required
+                />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="picker2"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div class="col-6">
+              <mat-form-field class="example-full-width">
+                <input
+                  type="number"
+                  matInput
+                  placeholder="DURACIÓN EN DÍAS"
+                  formControlName="cantDiasDuracion"
+                  required
+                />
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="row">
+            <div class="form-group">
+              <button
+                mat-raised-button
+                type="button"
+                class="btn btn-primary"
+                (click)="confirmar()"
+                [disabled]="!form.valid"
+              >
+                Confirmar
+              </button>
+              <button
+                mat-raised-button
+                type="button"
+                class="btn btn-default btn-fill btn-wd"
+                (click)="cancelar()"
+              >
+                Cancelar
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

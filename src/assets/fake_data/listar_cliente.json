@@ -1,0 +1,50 @@
+{
+  "lista": [
+    {
+      "idCliente": 1,
+      "nombre": "jhony",
+      "apellido": "benitez",
+      "documento": "123123",
+      "idTipoDocumento": {
+        "idTipoDocumento": 1,
+        "codigo": "CI",
+        "descripcion": "Cédula de Identidad"
+      },
+      "nacionalidad": "PY",
+      "email": "kahanixd@mail.com",
+      "telefono": "123123123",
+      "fechaNacimiento": "2021/09/19"
+    },
+    {
+      "idCliente": 2,
+      "nombre": "marc",
+      "apellido": "singer",
+      "documento": "918239",
+      "idTipoDocumento": {
+        "idTipoDocumento": 1,
+        "codigo": "CI",
+        "descripcion": "Cédula de Identidad"
+      },
+      "nacionalidad": "PY",
+      "email": "marc@mail.com",
+      "telefono": "123123123",
+      "fechaNacimiento": "2021-09-15"
+    },
+    {
+      "idCliente": 3,
+      "nombre": "lore",
+      "apellido": "acos",
+      "documento": "4134123",
+      "idTipoDocumento": {
+        "idTipoDocumento": 1,
+        "codigo": "CI",
+        "descripcion": "Cédula de Identidad"
+      },
+      "nacionalidad": "PY",
+      "email": "lorelai@mail.com",
+      "telefono": "512312",
+      "fechaNacimiento": "2021-09-15"
+    }
+  ],
+  "total": 3
+}

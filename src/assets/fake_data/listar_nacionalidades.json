@@ -1,0 +1,1454 @@
+[
+  {
+    "nombre_en": "Afghanistan",
+    "nombre": "Afganistán",
+    "prefijoTelefono": "+93",
+    "codigo": "AF"
+  },
+  {
+    "nombre_en": "Albania",
+    "nombre": "Albania",
+    "prefijoTelefono": "+355",
+    "codigo": "AL"
+  },
+  {
+    "nombre_en": "Algeria",
+    "nombre": "Argelia",
+    "prefijoTelefono": "+213",
+    "codigo": "DZ"
+  },
+  {
+    "nombre_en": "AmericanSamoa",
+    "nombre": "Samoa Americana",
+    "prefijoTelefono": "+1684",
+    "codigo": "AS"
+  },
+  {
+    "nombre_en": "Andorra",
+    "nombre": "Andorra",
+    "prefijoTelefono": "+376",
+    "codigo": "AD"
+  },
+  {
+    "nombre_en": "Angola",
+    "nombre": "Angola",
+    "prefijoTelefono": "+244",
+    "codigo": "AO"
+  },
+  {
+    "nombre_en": "Anguilla",
+    "nombre": "Anguilla",
+    "prefijoTelefono": "+1264",
+    "codigo": "AI"
+  },
+  {
+    "nombre_en": "Antarctica",
+    "nombre": "Antártida",
+    "prefijoTelefono": "+672",
+    "codigo": "AQ"
+  },
+  {
+    "nombre_en": "Antigua and Barbuda",
+    "nombre": "Antigua y Barbuda",
+    "prefijoTelefono": "+1268",
+    "codigo": "AG"
+  },
+  {
+    "nombre_en": "Argentina",
+    "nombre": "Argentina",
+    "prefijoTelefono": "+54",
+    "codigo": "AR"
+  },
+  {
+    "nombre_en": "Armenia",
+    "nombre": "Armenia",
+    "prefijoTelefono": "+374",
+    "codigo": "AM"
+  },
+  {
+    "nombre_en": "Aruba",
+    "nombre": "Aruba",
+    "prefijoTelefono": "+297",
+    "codigo": "AW"
+  },
+  {
+    "nombre_en": "Australia",
+    "nombre": "Australia",
+    "prefijoTelefono": "+61",
+    "codigo": "AU"
+  },
+  {
+    "nombre_en": "Austria",
+    "nombre": "Austria",
+    "prefijoTelefono": "+43",
+    "codigo": "AT"
+  },
+  {
+    "nombre_en": "Azerbaijan",
+    "nombre": "Azerbaiyán",
+    "prefijoTelefono": "+994",
+    "codigo": "AZ"
+  },
+  {
+    "nombre_en": "Bahamas",
+    "nombre": "Bahamas",
+    "prefijoTelefono": "+1242",
+    "codigo": "BS"
+  },
+  {
+    "nombre_en": "Bahrain",
+    "nombre": "Baréin",
+    "prefijoTelefono": "+973",
+    "codigo": "BH"
+  },
+  {
+    "nombre_en": "Bangladesh",
+    "nombre": "Banglades",
+    "prefijoTelefono": "+880",
+    "codigo": "BD"
+  },
+  {
+    "nombre_en": "Barbados",
+    "nombre": "Barbados",
+    "prefijoTelefono": "+1246",
+    "codigo": "BB"
+  },
+  {
+    "nombre_en": "Belarus",
+    "nombre": "Bielorrusia",
+    "prefijoTelefono": "+375",
+    "codigo": "BY"
+  },
+  {
+    "nombre_en": "Belgium",
+    "nombre": "Bélgica",
+    "prefijoTelefono": "+32",
+    "codigo": "BE"
+  },
+  {
+    "nombre_en": "Belize",
+    "nombre": "Belice",
+    "prefijoTelefono": "+501",
+    "codigo": "BZ"
+  },
+  {
+    "nombre_en": "Benin",
+    "nombre": "Benin",
+    "prefijoTelefono": "+229",
+    "codigo": "BJ"
+  },
+  {
+    "nombre_en": "Bermuda",
+    "nombre": "Bermudas",
+    "prefijoTelefono": "+1441",
+    "codigo": "BM"
+  },
+  {
+    "nombre_en": "Bhutan",
+    "nombre": "Butan",
+    "prefijoTelefono": "+975",
+    "codigo": "BT"
+  },
+  {
+    "nombre_en": "Bolivia",
+    "nombre": "Bolivia",
+    "prefijoTelefono": "+591",
+    "codigo": "BO"
+  },
+  {
+    "nombre_en": "Bosnia and Herzegovina",
+    "nombre": "Bosnia-Herzegovina",
+    "prefijoTelefono": "+387",
+    "codigo": "BA"
+  },
+  {
+    "nombre_en": "Botswana",
+    "nombre": "Botsuana",
+    "prefijoTelefono": "+267",
+    "codigo": "BW"
+  },
+  {
+    "nombre_en": "Brazil",
+    "nombre": "Brasil",
+    "prefijoTelefono": "+55",
+    "codigo": "BR"
+  },
+  {
+    "nombre_en": "British Indian Ocean Territory",
+    "nombre": "Territorio Británico del Océano Índico",
+    "prefijoTelefono": "+246",
+    "codigo": "IO"
+  },
+  {
+    "nombre_en": "Brunei Darussalam",
+    "nombre": "Brunei",
+    "prefijoTelefono": "+673",
+    "codigo": "BN"
+  },
+  {
+    "nombre_en": "Bulgaria",
+    "nombre": "Bulgaria",
+    "prefijoTelefono": "+359",
+    "codigo": "BG"
+  },
+  {
+    "nombre_en": "Burkina Faso",
+    "nombre": "Burkina Faso",
+    "prefijoTelefono": "+226",
+    "codigo": "BF"
+  },
+  {
+    "nombre_en": "Burundi",
+    "nombre": "Burundi",
+    "prefijoTelefono": "+257",
+    "codigo": "BI"
+  },
+  {
+    "nombre_en": "Cambodia",
+    "nombre": "Camboya",
+    "prefijoTelefono": "+855",
+    "codigo": "KH"
+  },
+  {
+    "nombre_en": "Cameroon",
+    "nombre": "Camerún",
+    "prefijoTelefono": "+237",
+    "codigo": "CM"
+  },
+  {
+    "nombre_en": "Canada",
+    "nombre": "Canadá",
+    "prefijoTelefono": "+1",
+    "codigo": "CA"
+  },
+  {
+    "nombre_en": "Cape Verde",
+    "nombre": "Cabo Verde",
+    "prefijoTelefono": "+238",
+    "codigo": "CV"
+  },
+  {
+    "nombre_en": "Cayman Islands",
+    "nombre": "Islas Caimán",
+    "prefijoTelefono": "+ 345",
+    "codigo": "KY"
+  },
+  {
+    "nombre_en": "Central African Republic",
+    "nombre": "República Centroafricana",
+    "prefijoTelefono": "+236",
+    "codigo": "CF"
+  },
+  {
+    "nombre_en": "Chad",
+    "nombre": "Chad",
+    "prefijoTelefono": "+235",
+    "codigo": "TD"
+  },
+  {
+    "nombre_en": "Chile",
+    "nombre": "Chile",
+    "prefijoTelefono": "+56",
+    "codigo": "CL"
+  },
+  {
+    "nombre_en": "China",
+    "nombre": "China",
+    "prefijoTelefono": "+86",
+    "codigo": "CN"
+  },
+  {
+    "nombre_en": "Christmas Island",
+    "nombre": "Isla de Navidad",
+    "prefijoTelefono": "+61",
+    "codigo": "CX"
+  },
+  {
+    "nombre_en": "Cocos (Keeling) Islands",
+    "nombre": "Islas Cocos",
+    "prefijoTelefono": "+61",
+    "codigo": "CC"
+  },
+  {
+    "nombre_en": "Colombia",
+    "nombre": "Colombia",
+    "prefijoTelefono": "+57",
+    "codigo": "CO"
+  },
+  {
+    "nombre_en": "Comoros",
+    "nombre": "Comoras",
+    "prefijoTelefono": "+269",
+    "codigo": "KM"
+  },
+  {
+    "nombre_en": "Congo",
+    "nombre": "Congo",
+    "prefijoTelefono": "+242",
+    "codigo": "CG"
+  },
+  {
+    "nombre_en": "Congo, The Democratic Republic of the",
+    "nombre": "República Democrática del Congo",
+    "prefijoTelefono": "+243",
+    "codigo": "CD"
+  },
+  {
+    "nombre_en": "Cook Islands",
+    "nombre": "Islas Cook",
+    "prefijoTelefono": "+682",
+    "codigo": "CK"
+  },
+  {
+    "nombre_en": "Costa Rica",
+    "nombre": "Costa Rica",
+    "prefijoTelefono": "+506",
+    "codigo": "CR"
+  },
+  {
+    "nombre_en": "Cote d'Ivoire",
+    "nombre": "Costa de Marfil",
+    "prefijoTelefono": "+225",
+    "codigo": "CI"
+  },
+  {
+    "nombre_en": "Croatia",
+    "nombre": "Croacia",
+    "prefijoTelefono": "+385",
+    "codigo": "HR"
+  },
+  {
+    "nombre_en": "Cuba",
+    "nombre": "Cuba",
+    "prefijoTelefono": "+53",
+    "codigo": "CU"
+  },
+  {
+    "nombre_en": "Cyprus",
+    "nombre": "Chipre",
+    "prefijoTelefono": "+537",
+    "codigo": "CY"
+  },
+  {
+    "nombre_en": "Czechia",
+    "nombre": "Chequia",
+    "prefijoTelefono": "+420",
+    "codigo": "CZ"
+  },
+  {
+    "nombre_en": "Denmark",
+    "nombre": "Dinamarca",
+    "prefijoTelefono": "+45",
+    "codigo": "DK"
+  },
+  {
+    "nombre_en": "Djibouti",
+    "nombre": "Yibuti",
+    "prefijoTelefono": "+253",
+    "codigo": "DJ"
+  },
+  {
+    "nombre_en": "Dominica",
+    "nombre": "Dominica",
+    "prefijoTelefono": "+1767",
+    "codigo": "DM"
+  },
+  {
+    "nombre_en": "Dominican Republic",
+    "nombre": "República Dominicana",
+    "prefijoTelefono": "+1849",
+    "codigo": "DO"
+  },
+  {
+    "nombre_en": "Ecuador",
+    "nombre": "Ecuador",
+    "prefijoTelefono": "+593",
+    "codigo": "EC"
+  },
+  {
+    "nombre_en": "Egypt",
+    "nombre": "Egipto",
+    "prefijoTelefono": "+20",
+    "codigo": "EG"
+  },
+  {
+    "nombre_en": "El Salvador",
+    "nombre": "El Salvador",
+    "prefijoTelefono": "+503",
+    "codigo": "SV"
+  },
+  {
+    "nombre_en": "Equatorial Guinea",
+    "nombre": "Guinea Ecuatorial",
+    "prefijoTelefono": "+240",
+    "codigo": "GQ"
+  },
+  {
+    "nombre_en": "Eritrea",
+    "nombre": "Eritrea",
+    "prefijoTelefono": "+291",
+    "codigo": "ER"
+  },
+  {
+    "nombre_en": "Estonia",
+    "nombre": "Estonia",
+    "prefijoTelefono": "+372",
+    "codigo": "EE"
+  },
+  {
+    "nombre_en": "Ethiopia",
+    "nombre": "Etiopía",
+    "prefijoTelefono": "+251",
+    "codigo": "ET"
+  },
+  {
+    "nombre_en": "Falkland Islands (Malvinas)",
+    "nombre": "Islas Malvinas",
+    "prefijoTelefono": "+500",
+    "codigo": "FK"
+  },
+  {
+    "nombre_en": "Faroe Islands",
+    "nombre": "Islas Feroe",
+    "prefijoTelefono": "+298",
+    "codigo": "FO"
+  },
+  {
+    "nombre_en": "Fiji",
+    "nombre": "Fiyi",
+    "prefijoTelefono": "+679",
+    "codigo": "FJ"
+  },
+  {
+    "nombre_en": "Finland",
+    "nombre": "Finlandia",
+    "prefijoTelefono": "+358",
+    "codigo": "FI"
+  },
+  {
+    "nombre_en": "France",
+    "nombre": "Francia",
+    "prefijoTelefono": "+33",
+    "codigo": "FR"
+  },
+  {
+    "nombre_en": "French Guiana",
+    "nombre": "Guayana Francesa",
+    "prefijoTelefono": "+594",
+    "codigo": "GF"
+  },
+  {
+    "nombre_en": "French Polynesia",
+    "nombre": "Polinesia Francesa",
+    "prefijoTelefono": "+689",
+    "codigo": "PF"
+  },
+  {
+    "nombre_en": "Gabon",
+    "nombre": "Gabón",
+    "prefijoTelefono": "+241",
+    "codigo": "GA"
+  },
+  {
+    "nombre_en": "Gambia",
+    "nombre": "Gambia",
+    "prefijoTelefono": "+220",
+    "codigo": "GM"
+  },
+  {
+    "nombre_en": "Georgia",
+    "nombre": "Georgia",
+    "prefijoTelefono": "+995",
+    "codigo": "GE"
+  },
+  {
+    "nombre_en": "Germany",
+    "nombre": "Alemania",
+    "prefijoTelefono": "+49",
+    "codigo": "DE"
+  },
+  {
+    "nombre_en": "Ghana",
+    "nombre": "Ghana",
+    "prefijoTelefono": "+233",
+    "codigo": "GH"
+  },
+  {
+    "nombre_en": "Gibraltar",
+    "nombre": "Gibraltar",
+    "prefijoTelefono": "+350",
+    "codigo": "GI"
+  },
+  {
+    "nombre_en": "Greece",
+    "nombre": "Grecia",
+    "prefijoTelefono": "+30",
+    "codigo": "GR"
+  },
+  {
+    "nombre_en": "Greenland",
+    "nombre": "Groenlandia",
+    "prefijoTelefono": "+299",
+    "codigo": "GL"
+  },
+  {
+    "nombre_en": "Grenada",
+    "nombre": "Granada",
+    "prefijoTelefono": "+1473",
+    "codigo": "GD"
+  },
+  {
+    "nombre_en": "Guadeloupe",
+    "nombre": "Guadalupe",
+    "prefijoTelefono": "+590",
+    "codigo": "GP"
+  },
+  {
+    "nombre_en": "Guam",
+    "nombre": "Guam",
+    "prefijoTelefono": "+1671",
+    "codigo": "GU"
+  },
+  {
+    "nombre_en": "Guatemala",
+    "nombre": "Guatemala",
+    "prefijoTelefono": "+502",
+    "codigo": "GT"
+  },
+  {
+    "nombre_en": "Guernsey",
+    "nombre": "Guernsey",
+    "prefijoTelefono": "+44",
+    "codigo": "GG"
+  },
+  {
+    "nombre_en": "Guinea",
+    "nombre": "Guinea",
+    "prefijoTelefono": "+224",
+    "codigo": "GN"
+  },
+  {
+    "nombre_en": "Guinea-Bissau",
+    "nombre": "Guinea-Bisau",
+    "prefijoTelefono": "+245",
+    "codigo": "GW"
+  },
+  {
+    "nombre_en": "Guyana",
+    "nombre": "Guyana",
+    "prefijoTelefono": "+595",
+    "codigo": "GY"
+  },
+  {
+    "nombre_en": "Haiti",
+    "nombre": "Haití",
+    "prefijoTelefono": "+509",
+    "codigo": "HT"
+  },
+  {
+    "nombre_en": "Holy See (Vatican City State)",
+    "nombre": "Ciudad del Vaticano",
+    "prefijoTelefono": "+379",
+    "codigo": "VA"
+  },
+  {
+    "nombre_en": "Honduras",
+    "nombre": "Honduras",
+    "prefijoTelefono": "+504",
+    "codigo": "HN"
+  },
+  {
+    "nombre_en": "Hong Kong",
+    "nombre": "Hong Kong",
+    "prefijoTelefono": "+852",
+    "codigo": "HK"
+  },
+  {
+    "nombre_en": "Hungary",
+    "nombre": "Hungría",
+    "prefijoTelefono": "+36",
+    "codigo": "HU"
+  },
+  {
+    "nombre_en": "Iceland",
+    "nombre": "Islandia",
+    "prefijoTelefono": "+354",
+    "codigo": "IS"
+  },
+  {
+    "nombre_en": "India",
+    "nombre": "India",
+    "prefijoTelefono": "+91",
+    "codigo": "IN"
+  },
+  {
+    "nombre_en": "Indonesia",
+    "nombre": "Indonesia",
+    "prefijoTelefono": "+62",
+    "codigo": "ID"
+  },
+  {
+    "nombre_en": "Iran, Islamic Republic of",
+    "nombre": "Irán",
+    "prefijoTelefono": "+98",
+    "codigo": "IR"
+  },
+  {
+    "nombre_en": "Iraq",
+    "nombre": "Iraq",
+    "prefijoTelefono": "+964",
+    "codigo": "IQ"
+  },
+  {
+    "nombre_en": "Ireland",
+    "nombre": "Irlanda",
+    "prefijoTelefono": "+353",
+    "codigo": "IE"
+  },
+  {
+    "nombre_en": "Isle of Man",
+    "nombre": "Isla de Man",
+    "prefijoTelefono": "+44",
+    "codigo": "IM"
+  },
+  {
+    "nombre_en": "Israel",
+    "nombre": "Israel",
+    "prefijoTelefono": "+972",
+    "codigo": "IL"
+  },
+  {
+    "nombre_en": "Italy",
+    "nombre": "Italia",
+    "prefijoTelefono": "+39",
+    "codigo": "IT"
+  },
+  {
+    "nombre_en": "Jamaica",
+    "nombre": "Jamaica",
+    "prefijoTelefono": "+1876",
+    "codigo": "JM"
+  },
+  {
+    "nombre_en": "Japan",
+    "nombre": "Japón",
+    "prefijoTelefono": "+81",
+    "codigo": "JP"
+  },
+  {
+    "nombre_en": "Jersey",
+    "nombre": "Jersey",
+    "prefijoTelefono": "+44",
+    "codigo": "JE"
+  },
+  {
+    "nombre_en": "Jordan",
+    "nombre": "Jordania",
+    "prefijoTelefono": "+962",
+    "codigo": "JO"
+  },
+  {
+    "nombre_en": "Kazakhstan",
+    "nombre": "Kazajistán",
+    "prefijoTelefono": "+7",
+    "codigo": "KZ"
+  },
+  {
+    "nombre_en": "Kenya",
+    "nombre": "Kenia",
+    "prefijoTelefono": "+254",
+    "codigo": "KE"
+  },
+  {
+    "nombre_en": "Kiribati",
+    "nombre": "Kiribati",
+    "prefijoTelefono": "+686",
+    "codigo": "KI"
+  },
+  {
+    "nombre_en": "Korea, Democratic People's Republic of",
+    "nombre": "Corea del Norte",
+    "prefijoTelefono": "+850",
+    "codigo": "KP"
+  },
+  {
+    "nombre_en": "Korea, Republic of",
+    "nombre": "Corea del Sur",
+    "prefijoTelefono": "+82",
+    "codigo": "KR"
+  },
+  {
+    "nombre_en": "Kosovo",
+    "nombre": "Kosovo",
+    "prefijoTelefono": "+383",
+    "codigo": "XK"
+  },
+  {
+    "nombre_en": "Kuwait",
+    "nombre": "Kuwait",
+    "prefijoTelefono": "+965",
+    "codigo": "KW"
+  },
+  {
+    "nombre_en": "Kyrgyzstan",
+    "nombre": "Kirguistán",
+    "prefijoTelefono": "+996",
+    "codigo": "KG"
+  },
+  {
+    "nombre_en": "Lao People's Democratic Republic",
+    "nombre": "Laos",
+    "prefijoTelefono": "+856",
+    "codigo": "LA"
+  },
+  {
+    "nombre_en": "Latvia",
+    "nombre": "Letonia",
+    "prefijoTelefono": "+371",
+    "codigo": "LV"
+  },
+  {
+    "nombre_en": "Lebanon",
+    "nombre": "Líbano",
+    "prefijoTelefono": "+961",
+    "codigo": "LB"
+  },
+  {
+    "nombre_en": "Lesotho",
+    "nombre": "Lesoto",
+    "prefijoTelefono": "+266",
+    "codigo": "LS"
+  },
+  {
+    "nombre_en": "Liberia",
+    "nombre": "Liberia",
+    "prefijoTelefono": "+231",
+    "codigo": "LR"
+  },
+  {
+    "nombre_en": "Libyan Arab Jamahiriya",
+    "nombre": "Libia",
+    "prefijoTelefono": "+218",
+    "codigo": "LY"
+  },
+  {
+    "nombre_en": "Liechtenstein",
+    "nombre": "Liechtenstein",
+    "prefijoTelefono": "+423",
+    "codigo": "LI"
+  },
+  {
+    "nombre_en": "Lithuania",
+    "nombre": "Lituania",
+    "prefijoTelefono": "+370",
+    "codigo": "LT"
+  },
+  {
+    "nombre_en": "Luxembourg",
+    "nombre": "Luxemburgo",
+    "prefijoTelefono": "+352",
+    "codigo": "LU"
+  },
+  {
+    "nombre_en": "Macao",
+    "nombre": "Macao",
+    "prefijoTelefono": "+853",
+    "codigo": "MO"
+  },
+  {
+    "nombre_en": "Macedonia, The Former Yugoslav Republic of",
+    "nombre": "República de Macedonia",
+    "prefijoTelefono": "+389",
+    "codigo": "MK"
+  },
+  {
+    "nombre_en": "Madagascar",
+    "nombre": "Madagascar",
+    "prefijoTelefono": "+261",
+    "codigo": "MG"
+  },
+  {
+    "nombre_en": "Malawi",
+    "nombre": "Malaui",
+    "prefijoTelefono": "+265",
+    "codigo": "MW"
+  },
+  {
+    "nombre_en": "Malaysia",
+    "nombre": "Malasia",
+    "prefijoTelefono": "+60",
+    "codigo": "MY"
+  },
+  {
+    "nombre_en": "Maldives",
+    "nombre": "Maldivas",
+    "prefijoTelefono": "+960",
+    "codigo": "MV"
+  },
+  {
+    "nombre_en": "Mali",
+    "nombre": "Malí",
+    "prefijoTelefono": "+223",
+    "codigo": "ML"
+  },
+  {
+    "nombre_en": "Malta",
+    "nombre": "Malta",
+    "prefijoTelefono": "+356",
+    "codigo": "MT"
+  },
+  {
+    "nombre_en": "Marshall Islands",
+    "nombre": "Islas Marshall",
+    "prefijoTelefono": "+692",
+    "codigo": "MH"
+  },
+  {
+    "nombre_en": "Martinique",
+    "nombre": "Martinica",
+    "prefijoTelefono": "+596",
+    "codigo": "MQ"
+  },
+  {
+    "nombre_en": "Mauritania",
+    "nombre": "Mauritania",
+    "prefijoTelefono": "+222",
+    "codigo": "MR"
+  },
+  {
+    "nombre_en": "Mauritius",
+    "nombre": "Mauricio",
+    "prefijoTelefono": "+230",
+    "codigo": "MU"
+  },
+  {
+    "nombre_en": "Mayotte",
+    "nombre": "Mayotte",
+    "prefijoTelefono": "+262",
+    "codigo": "YT"
+  },
+  {
+    "nombre_en": "Mexico",
+    "nombre": "México",
+    "prefijoTelefono": "+52",
+    "codigo": "MX"
+  },
+  {
+    "nombre_en": "Micronesia, Federated States of",
+    "nombre": "Estados Federados de Micronesia",
+    "prefijoTelefono": "+691",
+    "codigo": "FM"
+  },
+  {
+    "nombre_en": "Moldova, Republic of",
+    "nombre": "Moldavia",
+    "prefijoTelefono": "+373",
+    "codigo": "MD"
+  },
+  {
+    "nombre_en": "Monaco",
+    "nombre": "Monaco",
+    "prefijoTelefono": "+377",
+    "codigo": "MC"
+  },
+  {
+    "nombre_en": "Mongolia",
+    "nombre": "Mongolia",
+    "prefijoTelefono": "+976",
+    "codigo": "MN"
+  },
+  {
+    "nombre_en": "Montenegro",
+    "nombre": "Montenegro",
+    "prefijoTelefono": "+382",
+    "codigo": "ME"
+  },
+  {
+    "nombre_en": "Montserrat",
+    "nombre": "Montserrat",
+    "prefijoTelefono": "+1664",
+    "codigo": "MS"
+  },
+  {
+    "nombre_en": "Morocco",
+    "nombre": "Marruecos",
+    "prefijoTelefono": "+212",
+    "codigo": "MA"
+  },
+  {
+    "nombre_en": "Mozambique",
+    "nombre": "Mozambique",
+    "prefijoTelefono": "+258",
+    "codigo": "MZ"
+  },
+  {
+    "nombre_en": "Myanmar",
+    "nombre": "Birmania",
+    "prefijoTelefono": "+95",
+    "codigo": "MM"
+  },
+  {
+    "nombre_en": "Namibia",
+    "nombre": "Namibia",
+    "prefijoTelefono": "+264",
+    "codigo": "NA"
+  },
+  {
+    "nombre_en": "Nauru",
+    "nombre": "Nauru",
+    "prefijoTelefono": "+674",
+    "codigo": "NR"
+  },
+  {
+    "nombre_en": "Nepal",
+    "nombre": "Nepal",
+    "prefijoTelefono": "+977",
+    "codigo": "NP"
+  },
+  {
+    "nombre_en": "Netherlands",
+    "nombre": "Holanda",
+    "prefijoTelefono": "+31",
+    "codigo": "NL"
+  },
+  {
+    "nombre_en": "Netherlands Antilles",
+    "nombre": "Antillas Holandesas",
+    "prefijoTelefono": "+599",
+    "codigo": "AN"
+  },
+  {
+    "nombre_en": "New Caledonia",
+    "nombre": "Nueva Caledonia",
+    "prefijoTelefono": "+687",
+    "codigo": "NC"
+  },
+  {
+    "nombre_en": "New Zealand",
+    "nombre": "Nueva Zelanda",
+    "prefijoTelefono": "+64",
+    "codigo": "NZ"
+  },
+  {
+    "nombre_en": "Nicaragua",
+    "nombre": "Nicaragua",
+    "prefijoTelefono": "+505",
+    "codigo": "NI"
+  },
+  {
+    "nombre_en": "Niger",
+    "nombre": "Niger",
+    "prefijoTelefono": "+227",
+    "codigo": "NE"
+  },
+  {
+    "nombre_en": "Nigeria",
+    "nombre": "Nigeria",
+    "prefijoTelefono": "+234",
+    "codigo": "NG"
+  },
+  {
+    "nombre_en": "Niue",
+    "nombre": "Niue",
+    "prefijoTelefono": "+683",
+    "codigo": "NU"
+  },
+  {
+    "nombre_en": "NorfolkIsland",
+    "nombre": "IslaNorfolk",
+    "prefijoTelefono": "+672",
+    "codigo": "NF"
+  },
+  {
+    "nombre_en": "NorthernMarianaIslands",
+    "nombre": "IslasMarianasdelNorte",
+    "prefijoTelefono": "+1670",
+    "codigo": "MP"
+  },
+  {
+    "nombre_en": "Norway",
+    "nombre": "Noruega",
+    "prefijoTelefono": "+47",
+    "codigo": "NO"
+  },
+  {
+    "nombre_en": "Oman",
+    "nombre": "Omán",
+    "prefijoTelefono": "+968",
+    "codigo": "OM"
+  },
+  {
+    "nombre_en": "Pakistan",
+    "nombre": "Pakistán",
+    "prefijoTelefono": "+92",
+    "codigo": "PK"
+  },
+  {
+    "nombre_en": "Palau",
+    "nombre": "Palaos",
+    "prefijoTelefono": "+680",
+    "codigo": "PW"
+  },
+  {
+    "nombre_en": "Panama",
+    "nombre": "Panamá",
+    "prefijoTelefono": "+507",
+    "codigo": "PA"
+  },
+  {
+    "nombre_en": "Papua New Guinea",
+    "nombre": "Papúa Nueva Guinea",
+    "prefijoTelefono": "+675",
+    "codigo": "PG"
+  },
+  {
+    "nombre_en": "Paraguay",
+    "nombre": "Paraguay",
+    "prefijoTelefono": "+595",
+    "codigo": "PY"
+  },
+  {
+    "nombre_en": "Peru",
+    "nombre": "Perú",
+    "prefijoTelefono": "+51",
+    "codigo": "PE"
+  },
+  {
+    "nombre_en": "Philippines",
+    "nombre": "Filipinas",
+    "prefijoTelefono": "+63",
+    "codigo": "PH"
+  },
+  {
+    "nombre_en": "Pitcairn",
+    "nombre": "Islas Pitcairn",
+    "prefijoTelefono": "+872",
+    "codigo": "PN"
+  },
+  {
+    "nombre_en": "Poland",
+    "nombre": "Polonia",
+    "prefijoTelefono": "+48",
+    "codigo": "PL"
+  },
+  {
+    "nombre_en": "Portugal",
+    "nombre": "Portugal",
+    "prefijoTelefono": "+351",
+    "codigo": "PT"
+  },
+  {
+    "nombre_en": "Puerto Rico",
+    "nombre": "Puerto Rico",
+    "prefijoTelefono": "+1939",
+    "codigo": "PR"
+  },
+  {
+    "nombre_en": "Qatar",
+    "nombre": "Qatar",
+    "prefijoTelefono": "+974",
+    "codigo": "QA"
+  },
+  {
+    "nombre_en": "Romania",
+    "nombre": "Rumania",
+    "prefijoTelefono": "+40",
+    "codigo": "RO"
+  },
+  {
+    "nombre_en": "Russia",
+    "nombre": "Rusia",
+    "prefijoTelefono": "+7",
+    "codigo": "RU"
+  },
+  {
+    "nombre_en": "Rwanda",
+    "nombre": "Ruanda",
+    "prefijoTelefono": "+250",
+    "codigo": "RW"
+  },
+  {
+    "nombre_en": "Réunion",
+    "nombre": "Reunion",
+    "prefijoTelefono": "+262",
+    "codigo": "RE"
+  },
+  {
+    "nombre_en": "Saint Barthélemy",
+    "nombre": "San Bartolome",
+    "prefijoTelefono": "+590",
+    "codigo": "BL"
+  },
+  {
+    "nombre_en": "Saint Helena, Ascension and Tristan Da Cunha",
+    "nombre": "Santa Elena, Ascensión y Tristán de Acuña",
+    "prefijoTelefono": "+290",
+    "codigo": "SH"
+  },
+  {
+    "nombre_en": "Saint Kitts and Nevis",
+    "nombre": "San Cristóbal y Nieves",
+    "prefijoTelefono": "+1869",
+    "codigo": "KN"
+  },
+  {
+    "nombre_en": "Saint Lucia",
+    "nombre": "Santa Lucía",
+    "prefijoTelefono": "+1758",
+    "codigo": "LC"
+  },
+  {
+    "nombre_en": "Saint Martin",
+    "nombre": "Isla de San Martín",
+    "prefijoTelefono": "+590",
+    "codigo": "MF"
+  },
+  {
+    "nombre_en": "Saint Pierre and Miquelon",
+    "nombre": "San Pedro y Miquelon",
+    "prefijoTelefono": "+508",
+    "codigo": "PM"
+  },
+  {
+    "nombre_en": "Saint Vincent and the Grenadines",
+    "nombre": "San Vicente y las Granadinas",
+    "prefijoTelefono": "+1784",
+    "codigo": "VC"
+  },
+  {
+    "nombre_en": "Samoa",
+    "nombre": "Samoa",
+    "prefijoTelefono": "+685",
+    "codigo": "WS"
+  },
+  {
+    "nombre_en": "San Marino",
+    "nombre": "San Marino",
+    "prefijoTelefono": "+378",
+    "codigo": "SM"
+  },
+  {
+    "nombre_en": "Sao Tome and Principe",
+    "nombre": " Santo Tomé y Príncipe",
+    "prefijoTelefono": "+239",
+    "codigo": "ST"
+  },
+  {
+    "nombre_en": "Saudi Arabia",
+    "nombre": "Arabia Saudita",
+    "prefijoTelefono": "+966",
+    "codigo": "SA"
+  },
+  {
+    "nombre_en": "Senegal",
+    "nombre": "Senegal",
+    "prefijoTelefono": "+221",
+    "codigo": "SN"
+  },
+  {
+    "nombre_en": "Serbia",
+    "nombre": "Serbia",
+    "prefijoTelefono": "+381",
+    "codigo": "RS"
+  },
+  {
+    "nombre_en": "Seychelles",
+    "nombre": "Seychelles",
+    "prefijoTelefono": "+248",
+    "codigo": "SC"
+  },
+  {
+    "nombre_en": "Sierra Leone",
+    "nombre": "Sierra Leona",
+    "prefijoTelefono": "+232",
+    "codigo": "SL"
+  },
+  {
+    "nombre_en": "Singapore",
+    "nombre": "Singapur",
+    "prefijoTelefono": "+65",
+    "codigo": "SG"
+  },
+  {
+    "nombre_en": "Slovakia",
+    "nombre": "Eslovaquia",
+    "prefijoTelefono": "+421",
+    "codigo": "SK"
+  },
+  {
+    "nombre_en": "Slovenia",
+    "nombre": "Eslovenia",
+    "prefijoTelefono": "+386",
+    "codigo": "SI"
+  },
+  {
+    "nombre_en": "Solomon Islands",
+    "nombre": "Islas Salomón",
+    "prefijoTelefono": "+677",
+    "codigo": "SB"
+  },
+  {
+    "nombre_en": "Somalia",
+    "nombre": "Somalia",
+    "prefijoTelefono": "+252",
+    "codigo": "SO"
+  },
+  {
+    "nombre_en": "South Africa",
+    "nombre": "Sudáfrica",
+    "prefijoTelefono": "+27",
+    "codigo": "ZA"
+  },
+  {
+    "nombre_en": "South Sudan",
+    "nombre": "Sudán del Sur",
+    "prefijoTelefono": "+211",
+    "codigo": "SS"
+  },
+  {
+    "nombre_en": "Spain",
+    "nombre": "España",
+    "prefijoTelefono": "+34",
+    "codigo": "ES"
+  },
+  {
+    "nombre_en": "Sri Lanka",
+    "nombre": "Sri Lanka",
+    "prefijoTelefono": "+94",
+    "codigo": "LK"
+  },
+  {
+    "nombre_en": "State of Palestine",
+    "nombre": "Estado de Palestina",
+    "prefijoTelefono": "+970",
+    "codigo": "PS"
+  },
+  {
+    "nombre_en": "Sudan",
+    "nombre": "Sudán",
+    "prefijoTelefono": "+249",
+    "codigo": "SD"
+  },
+  {
+    "nombre_en": "Suriname",
+    "nombre": "Surinam",
+    "prefijoTelefono": "+597",
+    "codigo": "SR"
+  },
+  {
+    "nombre_en": "Svalbard and Jan Mayen",
+    "nombre": "Svalbard y Jan Mayen",
+    "prefijoTelefono": "+47",
+    "codigo": "SJ"
+  },
+  {
+    "nombre_en": "Swaziland",
+    "nombre": "Suazilandia",
+    "prefijoTelefono": "+268",
+    "codigo": "SZ"
+  },
+  {
+    "nombre_en": "Sweden",
+    "nombre": "Suecia",
+    "prefijoTelefono": "+46",
+    "codigo": "SE"
+  },
+  {
+    "nombre_en": "Switzerland",
+    "nombre": "Suiza",
+    "prefijoTelefono": "+41",
+    "codigo": "CH"
+  },
+  {
+    "nombre_en": "Syrian Arab Republic",
+    "nombre": "Siria",
+    "prefijoTelefono": "+963",
+    "codigo": "SY"
+  },
+  {
+    "nombre_en": "Taiwan, Province of China",
+    "nombre": "Taiwán",
+    "prefijoTelefono": "+886",
+    "codigo": "TW"
+  },
+  {
+    "nombre_en": "Tayikistan",
+    "nombre": "Tayikistán",
+    "prefijoTelefono": "+992",
+    "codigo": "TJ"
+  },
+  {
+    "nombre_en": "Tanzania, United Republic of",
+    "nombre": "Tanzania",
+    "prefijoTelefono": "+255",
+    "codigo": "TZ"
+  },
+  {
+    "nombre_en": "Thailand",
+    "nombre": "Tailandia",
+    "prefijoTelefono": "+66",
+    "codigo": "TH"
+  },
+  {
+    "nombre_en": "Timor-Leste",
+    "nombre": "Timor Oriental",
+    "prefijoTelefono": "+670",
+    "codigo": "TL"
+  },
+  {
+    "nombre_en": "Togo",
+    "nombre": "Togo",
+    "prefijoTelefono": "+228",
+    "codigo": "TG"
+  },
+  {
+    "nombre_en": "Tokelau",
+    "nombre": "Tokelau",
+    "prefijoTelefono": "+690",
+    "codigo": "TK"
+  },
+  {
+    "nombre_en": "Tonga",
+    "nombre": "Tonga",
+    "prefijoTelefono": "+676",
+    "codigo": "TO"
+  },
+  {
+    "nombre_en": "Trinidad and Tobago",
+    "nombre": "Trinidad y Tobago",
+    "prefijoTelefono": "+1868",
+    "codigo": "TT"
+  },
+  {
+    "nombre_en": "Tunisia",
+    "nombre": "Túnez",
+    "prefijoTelefono": "+216",
+    "codigo": "TN"
+  },
+  {
+    "nombre_en": "Turkey",
+    "nombre": "Turquía",
+    "prefijoTelefono": "+90",
+    "codigo": "TR"
+  },
+  {
+    "nombre_en": "Turkmenistan",
+    "nombre": "Turkmenistán",
+    "prefijoTelefono": "+993",
+    "codigo": "TM"
+  },
+  {
+    "nombre_en": "Turks and Caicos Islands",
+    "nombre": "Islas Turcas y Caicos",
+    "prefijoTelefono": "+1649",
+    "codigo": "TC"
+  },
+  {
+    "nombre_en": "Tuvalu",
+    "nombre": "Tuvalu",
+    "prefijoTelefono": "+688",
+    "codigo": "TV"
+  },
+  {
+    "nombre_en": "Uganda",
+    "nombre": "Uganda",
+    "prefijoTelefono": "+256",
+    "codigo": "UG"
+  },
+  {
+    "nombre_en": "Ukraine",
+    "nombre": "Ucrania",
+    "prefijoTelefono": "+380",
+    "codigo": "UA"
+  },
+  {
+    "nombre_en": "United Arab Emirates",
+    "nombre": "Emiratos Árabes Unidos",
+    "prefijoTelefono": "+971",
+    "codigo": "AE"
+  },
+  {
+    "nombre_en": "United Kingdom",
+    "nombre": "Reino Unido",
+    "prefijoTelefono": "+44",
+    "codigo": "GB"
+  },
+  {
+    "nombre_en": "United States",
+    "nombre": "Estados Unidos",
+    "prefijoTelefono": "+1",
+    "codigo": "US"
+  },
+  {
+    "nombre_en": "Uruguay",
+    "nombre": "Uruguay",
+    "prefijoTelefono": "+598",
+    "codigo": "UY"
+  },
+  {
+    "nombre_en": "Uzbekistan",
+    "nombre": "Uzbekistán",
+    "prefijoTelefono": "+998",
+    "codigo": "UZ"
+  },
+  {
+    "nombre_en": "Vanuatu",
+    "nombre": "Vanuatu",
+    "prefijoTelefono": "+678",
+    "codigo": "VU"
+  },
+  {
+    "nombre_en": "Venezuela, Bolivarian Republic of",
+    "nombre": "Venezuela",
+    "prefijoTelefono": "+58",
+    "codigo": "VE"
+  },
+  {
+    "nombre_en": "Vietnam",
+    "nombre": "Vietnam",
+    "prefijoTelefono": "+84",
+    "codigo": "VN"
+  },
+  {
+    "nombre_en": "Virgin Islands, British",
+    "nombre": "Islas Vírgenes Británicas",
+    "prefijoTelefono": "+1284",
+    "codigo": "VG"
+  },
+  {
+    "nombre_en": "Virgin Islands, U.S.",
+    "nombre": "Islas Vírgenes de los Estados Unidos",
+    "prefijoTelefono": "+1340",
+    "codigo": "VI"
+  },
+  {
+    "nombre_en": "Wallis and Futuna",
+    "nombre": "Wallis y Futuna",
+    "prefijoTelefono": "+681",
+    "codigo": "WF"
+  },
+  {
+    "nombre_en": "Yemen",
+    "nombre": "Yemen",
+    "prefijoTelefono": "+967",
+    "codigo": "YE"
+  },
+  {
+    "nombre_en": "Zambia",
+    "nombre": "Zambia",
+    "prefijoTelefono": "+260",
+    "codigo": "ZM"
+  },
+  {
+    "nombre_en": "Zimbabwe",
+    "nombre": "Zimbabue",
+    "prefijoTelefono": "+263",
+    "codigo": "ZW"
+  },
+  {
+    "nombre_en": "Åland Islands",
+    "nombre": "Åland",
+    "prefijoTelefono": "+358",
+    "codigo": "AX"
+  }
+]

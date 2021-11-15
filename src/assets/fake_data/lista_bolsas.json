@@ -1,0 +1,51 @@
+{
+  "lista": [
+    {
+      "idBolsa": 1,
+      "fechaAsignacion": "2021-08-22",
+      "fechaCaducidad": "2021-09-22",
+      "puntajeUtilizado": 12,
+      "saldoPuntos": 1232313,
+      "montoOperacion": 21000,
+      "idCliente": {
+        "idCliente": 1,
+        "nombre": "jhony",
+        "apellido": "benitez",
+        "documento": "123123",
+        "idTipoDocumento": {
+          "idTipoDocumento": 1,
+          "codigo": "CI",
+          "descripcion": "Cédula de Identidad"
+        },
+        "nacionalidad": "PY",
+        "email": "kahanixd@mail.com",
+        "telefono": "123123123",
+        "fechaNacimiento": "2021/09/19"
+      }
+    },
+    {
+      "idBolsa": 2,
+      "fechaAsignacion": "2021-04-22",
+      "fechaCaducidad": "2021-05-22",
+      "puntajeUtilizado": 15,
+      "saldoPuntos": 12334,
+      "montoOperacion": 131000,
+      "idCliente": {
+        "idCliente": 2,
+        "nombre": "marc",
+        "apellido": "singer",
+        "documento": "918239",
+        "idTipoDocumento": {
+          "idTipoDocumento": 1,
+          "codigo": "CI",
+          "descripcion": "Cédula de Identidad"
+        },
+        "nacionalidad": "PY",
+        "email": "marc@mail.com",
+        "telefono": "123123123",
+        "fechaNacimiento": "2021-09-15"
+      }
+    }
+  ],
+  "total": 2
+}

@@ -1,0 +1,17 @@
+{
+  "lista": [
+    {
+      "idVencimientoPunto": 1,
+      "fechaInicioValidez": "2021-09-19",
+      "fechaFinValidez": "2021-09-29",
+      "cantDiasDuracion": 10
+    },
+    {
+      "idVencimientoPunto": 2,
+      "fechaInicioValidez": "2021-08-09",
+      "fechaFinValidez": "2021-09-22",
+      "cantDiasDuracion": 13
+    }
+  ],
+  "total": 2
+}

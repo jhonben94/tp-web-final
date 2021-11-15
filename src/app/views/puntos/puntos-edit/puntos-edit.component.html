@@ -1,0 +1,82 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header card-header-primary card-header-icon">
+        <div class="card-icon">
+          <i class="material-icons">radio_button_checked</i>
+        </div>
+        <h4 class="card-title">
+          <strong>{{ titulo }}</strong>
+        </h4>
+      </div>
+
+      <form [formGroup]="form" (keydown.enter)="$event.preventDefault()">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6">
+              <mat-form-field class="example-full-width">
+                <input
+                  type="text"
+                  matInput
+                  placeholder="CONCEPTO"
+                  formControlName="concepto"
+                  required
+                />
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <input
+                  type="number"
+                  matInput
+                  placeholder="PUNTOS REQUERIDOS"
+                  formControlName="puntosRequeridos"
+                  required
+                />
+              </mat-form-field>
+            </div>
+            <div class="col-6">
+              <mat-form-field class="example-full-width">
+                <input
+                  type="number"
+                  matInput
+                  placeholder="RANGO INICIAL"
+                  formControlName="rangoInicial"
+                />
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <input
+                  type="number"
+                  matInput
+                  placeholder="RANGO FINAL"
+                  formControlName="rangoFinal"
+                />
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="row">
+            <div class="form-group">
+              <button
+                mat-raised-button
+                type="button"
+                class="btn btn-primary"
+                (click)="confirmar()"
+                [disabled]="!form.valid"
+              >
+                Confirmar
+              </button>
+              <button
+                mat-raised-button
+                type="button"
+                class="btn btn-default btn-fill btn-wd"
+                (click)="cancelar()"
+              >
+                Cancelar
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
