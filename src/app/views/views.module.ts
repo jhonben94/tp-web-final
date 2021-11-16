@@ -16,6 +16,8 @@ import { VencimientoPuntosComponent } from './vencimiento-puntos/vencimiento-pun
 import { VencimientoPuntosEditComponent } from './vencimiento-puntos/vencimiento-puntos-edit/vencimiento-puntos-edit.component';
 import { BuscadorClienteComponent } from './buscadores/buscador-cliente/buscador-cliente.component';
 import { BolsasComponent } from './bolsas/bolsas.component';
+import { VentasComponent } from './ventas/ventas.component';
+import { VentasEditComponent } from './ventas/ventas-edit/ventas-edit.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { BolsasComponent } from './bolsas/bolsas.component';
     VencimientoPuntosEditComponent,
     BuscadorClienteComponent,
     BolsasComponent,
+    VentasComponent,
+    VentasEditComponent,
   ],
   imports: [
     CommonModule,

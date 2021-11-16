@@ -1,3 +1,5 @@
+export { VentasService } from "./ventas.service";
+
 export { BolsasService } from "./bolsas.service";
 
 export { VencimientoPuntosService } from "./vencimiento-puntos.service";

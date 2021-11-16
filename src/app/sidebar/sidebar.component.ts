@@ -28,6 +28,12 @@ export const ROUTES: RouteInfo[] = [
     type: "link",
     icontype: "people",
   },
+  {
+    path: "/ventas",
+    title: "Ventas",
+    type: "link",
+    icontype: "credit_score",
+  },
 ];
 @Component({
   selector: "app-sidebar-cmp",

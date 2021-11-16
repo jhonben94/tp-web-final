@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, ViewChild } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { MatPaginator } from "@angular/material/paginator";
 import { MatSort } from "@angular/material/sort";
@@ -8,22 +8,24 @@ import {
   CANTIDAD_PAG_LIST,
   deleteEmptyData,
   formatearFecha,
-} from "../../../utils";
+} from "../../utils";
 import { startWith, switchMap, catchError, map } from "rxjs/operators";
-import { ClientesService } from "src/app/services";
 import {
-  MatDialog,
-  MatDialogRef,
-  MAT_DIALOG_DATA,
-} from "@angular/material/dialog";
+  BolsasService,
+  ClientesService,
+  VencimientoPuntosService,
+  VentasService,
+} from "src/app/services";
+import { MatDialog } from "@angular/material/dialog";
 import swal from "sweetalert2";
 import { Router } from "@angular/router";
+import { BuscadorClienteComponent } from "../buscadores/buscador-cliente/buscador-cliente.component";
 @Component({
-  selector: "app-buscador-cliente",
-  templateUrl: "./buscador-cliente.component.html",
-  styleUrls: ["./buscador-cliente.component.css"],
+  selector: "app-ventas",
+  templateUrl: "./ventas.component.html",
+  styleUrls: ["./ventas.component.css"],
 })
-export class BuscadorClienteComponent implements OnInit {
+export class VentasComponent implements OnInit {
   selectedRow: any;
 
   /**
@@ -62,13 +64,12 @@ export class BuscadorClienteComponent implements OnInit {
    * @description Definicion de las columnas a ser visualizadas
    */
   displayedColumns: string[] = [
+    "idVenta",
     "idCliente",
-    "nombre",
-    "apellido",
-    "email",
-    "telefono",
-    "documento",
-    "fechaNacimiento",
+    "fecha",
+    "nroFactura",
+    "total",
+    "accion",
   ];
 
   opcionPagina = CANTIDAD_PAG_LIST;
@@ -81,45 +82,28 @@ export class BuscadorClienteComponent implements OnInit {
       matDef: "idCliente",
       label: "idCliente",
       descripcion: "CLIENTE",
+      cliente: true,
     },
     {
-      matDef: "nombre",
-      label: "nombre",
-      descripcion: "NOMBRE",
-    },
-
-    {
-      matDef: "apellido",
-      label: "apellido",
-      descripcion: "APELLIDO",
+      matDef: "idVenta",
+      label: "idVenta",
+      descripcion: "ID",
     },
     {
-      matDef: "telefono",
-      label: "telefono",
-      descripcion: "TELÉFONO",
-    },
-
-    {
-      matDef: "email",
-      label: "email",
-      descripcion: "CORREO",
-    },
-    {
-      matDef: "telefono",
-      label: "telefono",
-      descripcion: "TELÉFONO",
-    },
-
-    {
-      matDef: "documento",
-      label: "documento",
-      descripcion: "NRO. DOCUMENTO",
-    },
-    {
-      matDef: "fechaNacimiento",
-      label: "fechaNacimiento",
-      descripcion: "FECHA NAC.",
+      matDef: "fecha",
+      label: "fecha",
+      descripcion: "FECHA",
       fecha: true,
+    },
+    {
+      matDef: "nroFactura",
+      label: "nroFactura",
+      descripcion: "NRO FACTURA",
+    },
+    {
+      matDef: "total",
+      label: "total",
+      descripcion: "TOTAL",
     },
   ];
   /**
@@ -132,22 +116,19 @@ export class BuscadorClienteComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private service: ClientesService,
+    private service: VentasService,
     public dialog: MatDialog,
     private router: Router,
-    public dialogRef: MatDialogRef<BuscadorClienteComponent>,
-    @Inject(MAT_DIALOG_DATA) public dataModal: any
+    private clieService: ClientesService
   ) {
     this.filtrosForm = this.fb.group({
-      descripcion: [""],
-      nombre: [""],
-      apellido: [""],
-      email: [""],
-      telefono: [""],
-      documento: [""],
-      correo: [""],
-      tipoPersona: [""],
-      fechaNacimiento: [""],
+      fechaAsignacion: [""],
+      fechaCaducidad: [""],
+      puntajeUtilizado: [""],
+      saldoPuntos: [""],
+      montoOperacion: [""],
+      idCliente: [""],
+      nombreCliente: [""],
     });
   }
 
@@ -198,23 +179,101 @@ export class BuscadorClienteComponent implements OnInit {
       .subscribe((data) => (this.data = data));
   }
 
+  agregar(): void {
+    this.router.navigate(["ventas/agregar"]);
+  }
+
+  acciones(data, e) {
+    const id = "idVencimientoPunto";
+    const actionType = e.target.getAttribute("data-action-type");
+    switch (actionType) {
+      case "activar":
+        break;
+      case "eliminar":
+        swal
+          .fire({
+            title: "Está seguro que desea eliminar el registro?",
+            text: "Esta acción no se podrá revertir!",
+            icon: "warning",
+            showCancelButton: true,
+            customClass: {
+              confirmButton: "btn btn-success",
+              cancelButton: "btn btn-danger",
+            },
+            confirmButtonText: "Eliminar",
+            buttonsStyling: false,
+          })
+          .then((result) => {
+            if (result.value) {
+              this.service.eliminarRecurso(data[id]).subscribe((res) => {
+                swal
+                  .fire({
+                    title: "Éxito!",
+                    text: "El registro fue eliminado correctamente.",
+                    icon: "success",
+                    customClass: {
+                      confirmButton: "btn btn-success",
+                    },
+                    buttonsStyling: false,
+                  })
+                  .then(() => {
+                    this.limpiar();
+                  });
+              });
+            }
+          });
+        break;
+      case "editar":
+        this.router.navigate(["vencimiento-puntos/modificar", data[id]]);
+        break;
+      default:
+        break;
+    }
+  }
   mostrarCampo(row, columna) {
     if (columna.relacion) {
       if (row[columna.label] == null) return "";
+      if (Array.isArray(columna.columnaRelacion)) {
+        return this.multipleColumnas(
+          row[columna.label],
+          columna.columnaRelacion
+        );
+      }
       return row[columna.label][columna.columnaRelacion];
     } else {
       if (typeof columna.estados != "undefined") {
         const label = row[columna.label]
           ? columna.estados[0]
           : columna.estados[1];
-
         return label;
       }
       if (columna.fecha) {
-        return formatearFecha(new Date(row.fechaNacimiento));
+        return formatearFecha(new Date(row.fecha));
       }
+      /*   if (columna.cliente) {
+        this.clieService.obtenerRecurso(row[columna]).subscribe(
+          (resp: any) => {
+            console.log(resp);
+
+            return resp.nombre + " " + resp.apellido;
+          },
+          (err) => {
+            return "";
+          }
+        );
+      } */
+
       return row[columna.label];
     }
+  }
+
+  multipleColumnas(valor: any, listaCol: any[]) {
+    let valorRetorno = "";
+    for (let index = 0; index < listaCol.length; index++) {
+      const property = listaCol[index];
+      valorRetorno += valor[property] + " ";
+    }
+    return valorRetorno;
   }
   limpiar() {
     this.filtrosForm.reset();
@@ -235,5 +294,33 @@ export class BuscadorClienteComponent implements OnInit {
 
   onRowClicked(row) {
     this.selectedRow = row;
+  }
+
+  buscadores(buscador) {
+    let dialogRef = null;
+    switch (buscador) {
+      case "cliente":
+        dialogRef = this.dialog.open(BuscadorClienteComponent, {
+          data: {
+            title: "Buscador de Clientes",
+          },
+        });
+
+        dialogRef.afterClosed().subscribe((result: any) => {
+          console.log(result);
+          if (result) {
+            this.f.nombreCliente.setValue(
+              result.nombre + " " + result.apellido
+            );
+            this.f.idCliente.setValue(result.idCliente);
+          } else {
+            this.f.nombreEmpleado.setValue(null);
+          }
+        });
+        break;
+
+      default:
+        break;
+    }
   }
 }
