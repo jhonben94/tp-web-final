@@ -115,6 +115,34 @@ const clientes = [
   },
 ];
 
+const ventas = [
+  {
+    nroFactura: 10000001,
+    fecha: "2021-11-16T19:08:18.577Z",
+    idCliente: "id100000001",
+    nombreCliente: "Jhony Benitez",
+    total: 4650000,
+    detalle: [
+      {
+        cantidad: 2,
+        precio: 1800000,
+        subtotal: 3600000,
+        idProducto: "id10000001",
+        nombreProducto: "Xiaomi Note 8 pro",
+      },
+      {
+        cantidad: 3,
+        precio: 350000,
+        subtotal: 1050000,
+        idProducto: "id10000003",
+        nombreProducto: "Mouse HyperX Pulsefire",
+      },
+    ],
+    prefijoFactura: "001-001 ",
+    idVenta: "id1637089716295",
+  },
+];
+
 @Component({
   selector: "app-my-app",
   templateUrl: "./app.component.html",
@@ -128,6 +156,7 @@ export class AppComponent implements OnInit {
     localStorage.setItem("lista-productos", JSON.stringify(productos));
     localStorage.setItem("lista-ventas", JSON.stringify([]));
     localStorage.setItem("lista-clientes", JSON.stringify(clientes));
+    localStorage.setItem("lista-ventas", JSON.stringify(ventas));
     localStorage.setItem("nro-factura", JSON.stringify(10000000));
     localStorage.setItem("prefijo-factura", JSON.stringify("001-001 "));
     this._router = this.router.events
