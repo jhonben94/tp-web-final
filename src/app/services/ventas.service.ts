@@ -9,6 +9,7 @@ import { environment } from "src/environments/environment";
 export class VentasService {
   idLocalStorage: string = "lista-ventas";
   idNroFactura: string = "nro-factura";
+  idPrefijoFacutra: string = "prefijo-factura";
   constructor(private http: HttpClient) {}
   activarRecurso(id) {
     return [];
@@ -16,7 +17,7 @@ export class VentasService {
 
   agregarRecurso(recurso) {
     var uniq = "id" + new Date().getTime();
-    recurso.idCliente = uniq;
+    recurso.idVenta = uniq;
     let lista = JSON.parse(localStorage.getItem(this.idLocalStorage));
     if (lista) {
       lista.push(recurso);
@@ -28,8 +29,8 @@ export class VentasService {
   }
   modificarRecurso(recurso, id) {
     let lista = JSON.parse(localStorage.getItem(this.idLocalStorage));
-    recurso.idCliente = id;
-    lista = lista.filter((item) => item.idCliente != id);
+    recurso.idVenta = id;
+    lista = lista.filter((item) => item.idVenta != id);
 
     lista.push(recurso);
     localStorage.setItem(this.idLocalStorage, JSON.stringify(lista));
@@ -37,13 +38,13 @@ export class VentasService {
   }
   eliminarRecurso(id) {
     let lista = JSON.parse(localStorage.getItem(this.idLocalStorage));
-    lista = lista.filter((item) => item.idCliente != id);
+    lista = lista.filter((item) => item.idVenta != id);
     localStorage.setItem(this.idLocalStorage, JSON.stringify(lista));
     return of([]);
   }
   obtenerRecurso(id) {
     let lista = JSON.parse(localStorage.getItem(this.idLocalStorage));
-    const cliente = lista.find((item) => item.idCliente == id);
+    const cliente = lista.find((item) => item.idVenta == id);
     return of(cliente);
     // return this.http.get(this.recurosBaseURL + id);
   }
@@ -85,5 +86,8 @@ export class VentasService {
       nroFactura = 100000000;
     }
     return nroFactura + 1;
+  }
+  obtenerPrefijo() {
+    return JSON.parse(localStorage.getItem(this.idPrefijoFacutra));
   }
 }

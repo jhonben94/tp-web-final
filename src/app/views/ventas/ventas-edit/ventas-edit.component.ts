@@ -13,6 +13,8 @@ import { formatearFecha } from "src/app/utils";
 import swal from "sweetalert2";
 import { BuscadorClienteComponent } from "../../buscadores/buscador-cliente/buscador-cliente.component";
 import { BuscadorProductoComponent } from "../../buscadores/buscador-producto/buscador-producto.component";
+
+declare const $: any;
 @Component({
   selector: "app-ventas-edit",
   templateUrl: "./ventas-edit.component.html",
@@ -106,6 +108,7 @@ export class VentasEditComponent implements OnInit {
   id: any;
   titulo: any;
   formDetalle: FormGroup;
+  prefijoFactura: any;
   constructor(
     private fb: FormBuilder,
     private service: VentasService,
@@ -116,7 +119,7 @@ export class VentasEditComponent implements OnInit {
     this.form = this.fb.group({
       nroFactura: ["", Validators.required],
       fecha: ["", Validators.required],
-      idCliente: ["", Validators.required],
+      idCliente: [null, Validators.required],
       nombreCliente: [""],
       total: [0, Validators.required],
     });
@@ -149,14 +152,27 @@ export class VentasEditComponent implements OnInit {
       this.f.fecha.setValue(new Date());
       this.f.nroFactura.setValue(this.service.obtenerNroFactura());
       console.log(!this.form.valid, this.form.value);
+      this.f.nroFactura.disable();
+      this.f.fecha.disable();
+      this.f.total.disable();
+      this.prefijoFactura = this.service.obtenerPrefijo();
     }
   }
 
   confirmar() {
+    this.f.fecha.enable();
+    this.f.nroFactura.enable();
+    this.f.total.enable();
     let valorForm = this.form.value;
+
+    if (!valorForm.idCliente) {
+      this.showNotification("top", "center");
+    }
+    valorForm.detalle = this.data;
+    valorForm.prefijoFactura = this.prefijoFactura;
     console.log(valorForm);
 
-    /*  if (this.id) {
+    if (this.id) {
       this.service.modificarRecurso(valorForm, this.id).subscribe(
         (res) => {
           swal
@@ -200,6 +216,8 @@ export class VentasEditComponent implements OnInit {
             })
             .then(() => {
               this.form.reset();
+              this.data = [];
+              this.formDetalle.reset();
             });
         },
         (err) => {
@@ -214,7 +232,7 @@ export class VentasEditComponent implements OnInit {
           });
         }
       );
-    } */
+    }
   }
 
   cancelar() {
@@ -245,7 +263,8 @@ export class VentasEditComponent implements OnInit {
             );
             this.f.idCliente.setValue(result.idCliente);
           } else {
-            this.f.nombreEmpleado.setValue(null);
+            this.f.nombreCliente.setValue(null);
+            this.f.idCliente.setValue(null);
           }
         });
         break;
@@ -262,7 +281,10 @@ export class VentasEditComponent implements OnInit {
             this.fd.idProducto.setValue(result.idProducto);
             this.fd.precio.setValue(result.precioVenta);
           } else {
-            this.f.nombreEmpleado.setValue(null);
+            this.fd.nombreProducto.setValue(null);
+            this.fd.idProducto.setValue(null);
+            this.fd.sutotal.setValue(null);
+            this.fd.precio.setValue(null);
           }
         });
         break;
@@ -343,5 +365,33 @@ export class VentasEditComponent implements OnInit {
       }
       return row[columna.label];
     }
+  }
+
+  showNotification(from: any, align: any) {
+    $.notify(
+      {
+        icon: "notifications",
+        message: "Por favor, seleccione un cliente para realizar la venta.",
+      },
+      {
+        type: "danger",
+        timer: 3000,
+        placement: {
+          from: from,
+          align: align,
+        },
+        template:
+          '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0} alert-with-icon" role="alert">' +
+          '<button mat-raised-button type="button" aria-hidden="true" class="close" data-notify="dismiss">  <i class="material-icons">close</i></button>' +
+          '<i class="material-icons" data-notify="icon">notifications</i> ' +
+          '<span data-notify="title">{1}</span> ' +
+          '<span data-notify="message">{2}</span>' +
+          '<div class="progress" data-notify="progressbar">' +
+          '<div class="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+          "</div>" +
+          '<a href="{3}" target="{4}" data-notify="url"></a>' +
+          "</div>",
+      }
+    );
   }
 }

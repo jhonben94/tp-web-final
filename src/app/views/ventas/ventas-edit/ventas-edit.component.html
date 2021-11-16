@@ -37,7 +37,7 @@
                   formControlName="nroFactura"
                   required
                 />
-                <span matPrefix>001-001&nbsp;</span>
+                <span matPrefix>{{ prefijoFactura }}&nbsp;</span>
               </mat-form-field>
             </div>
             <div class="col-6">
@@ -96,7 +96,6 @@
                 placeholder="PRODUCTO"
                 formControlName="nombreProducto"
                 (click)="buscadores('producto')"
-                required
               />
               <button
                 mat-button
@@ -115,7 +114,6 @@
                 placeholder="CANTIDAD"
                 formControlName="cantidad"
                 (ngModelChange)="changeAmountDetail($event)"
-                required
               />
             </mat-form-field>
 
@@ -125,7 +123,6 @@
                 matInput
                 placeholder="PRECIO"
                 formControlName="precio"
-                required
               />
             </mat-form-field>
 
@@ -135,7 +132,6 @@
                 matInput
                 placeholder="SUBTOTAL"
                 formControlName="subtotal"
-                required
               />
             </mat-form-field>
 

@@ -129,6 +129,7 @@ export class AppComponent implements OnInit {
     localStorage.setItem("lista-ventas", JSON.stringify([]));
     localStorage.setItem("lista-clientes", JSON.stringify(clientes));
     localStorage.setItem("nro-factura", JSON.stringify(10000000));
+    localStorage.setItem("prefijo-factura", JSON.stringify("001-001 "));
     this._router = this.router.events
       .filter((event) => event instanceof NavigationEnd)
       .subscribe((event: NavigationEnd) => {
