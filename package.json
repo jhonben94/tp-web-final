@@ -53,6 +53,8 @@
     "jquery": "3.6.0",
     "jquery-validation": "^1.19.3",
     "jqvmap": "1.5.1",
+    "jspdf": "^2.4.0",
+    "jspdf-autotable": "^3.5.20",
     "moment": "2.29.1",
     "moment-timezone": "0.5.33",
     "ng2-nouislider": "1.8.3",
