@@ -323,10 +323,14 @@ export class VentasEditComponent implements OnInit {
   }
 
   addRow() {
+    const detalle = this.formDetalle.value;
     let lista = this.data.slice(0);
     lista.push(this.formDetalle.value);
     this.data = lista;
     this.formDetalle.reset();
+    const total = this.f.total.value;
+    const subtotal = detalle.cantidad * detalle.precio;
+    this.f.total.setValue(total + subtotal);
   }
   onRowClicked(row) {
     this.selectedRow = row;
