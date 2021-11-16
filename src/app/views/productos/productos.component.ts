@@ -178,7 +178,7 @@ export class ProductosComponent implements OnInit {
   }
 
   acciones(data, e) {
-    const id = "idCliente";
+    const id = "idProducto";
     const actionType = e.target.getAttribute("data-action-type");
     switch (actionType) {
       case "activar":

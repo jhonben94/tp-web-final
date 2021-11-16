@@ -15,7 +15,7 @@ export class ProductosService {
 
   agregarRecurso(recurso) {
     var uniq = "id" + new Date().getTime();
-    recurso.idCliente = uniq;
+    recurso.idProducto = uniq;
     let lista = JSON.parse(localStorage.getItem(this.idLocalStorage));
     if (lista) {
       lista.push(recurso);
@@ -27,8 +27,8 @@ export class ProductosService {
   }
   modificarRecurso(recurso, id) {
     let lista = JSON.parse(localStorage.getItem(this.idLocalStorage));
-    recurso.idCliente = id;
-    lista = lista.filter((item) => item.idCliente != id);
+    recurso.idProducto = id;
+    lista = lista.filter((item) => item.idProducto != id);
 
     lista.push(recurso);
     localStorage.setItem(this.idLocalStorage, JSON.stringify(lista));
@@ -36,14 +36,14 @@ export class ProductosService {
   }
   eliminarRecurso(id) {
     let lista = JSON.parse(localStorage.getItem(this.idLocalStorage));
-    lista = lista.filter((item) => item.idCliente != id);
+    lista = lista.filter((item) => item.idProducto != id);
     localStorage.setItem(this.idLocalStorage, JSON.stringify(lista));
     return of([]);
   }
   obtenerRecurso(id) {
     let lista = JSON.parse(localStorage.getItem(this.idLocalStorage));
-    const cliente = lista.find((item) => item.idCliente == id);
-    return of(cliente);
+    const producto = lista.find((item) => item.idProducto == id);
+    return of(producto);
     // return this.http.get(this.recurosBaseURL + id);
   }
   listarRecurso(ejemplo) {

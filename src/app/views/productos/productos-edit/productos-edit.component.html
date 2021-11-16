@@ -23,116 +23,60 @@
                                         required
                                 />
                             </mat-form-field>
+
                             <mat-form-field class="example-full-width">
                                 <input
                                         type="text"
                                         matInput
-                                        placeholder="APELLIDO"
-                                        formControlName="apellido"
-                                        required
-                                />
-                            </mat-form-field>
-                            <mat-form-field>
-                                <input
-                                        matInput
-                                        [matDatepicker]="picker"
-                                        placeholder="FECHA NACIMIENTO"
-                                        formControlName="fechaNacimiento"
-                                        (click)="picker.open()"
-                                        required
-                                />
-                                <mat-datepicker-toggle
-                                        matSuffix
-                                        [for]="picker"
-                                ></mat-datepicker-toggle>
-                                <mat-datepicker #picker></mat-datepicker>
-                            </mat-form-field>
-
-                            <mat-form-field class="example-full-width">
-                                <input
-                                        type="email"
-                                        matInput
-                                        placeholder="CORREO"
-                                        formControlName="email"
+                                        placeholder="CODIGO"
+                                        formControlName="codigo"
                                         required
                                 />
                             </mat-form-field>
                         </div>
                         <div class="col-6">
-                            <mat-form-field>
-                                <mat-label>TIPO DOCUMENTO</mat-label>
-                                <mat-select formControlName="idTipoDocumento">
-                                    <mat-option
-                                            *ngFor="let item of listaTipoDoc"
-                                            [value]="item.idTipoDocumento"
-                                    >
-                                        {{ item.descripcion }}
-                                    </mat-option>
-                                </mat-select>
-                            </mat-form-field>
                             <mat-form-field class="example-full-width">
                                 <input
-                                        type="text"
+                                        type="number"
                                         matInput
-                                        placeholder="DOCUMENTO"
-                                        formControlName="documento"
+                                        placeholder="PRECIO DE VENTA"
+                                        formControlName="precioVenta"
                                         required
                                 />
                             </mat-form-field>
-
-                            <mat-form-field>
-                                <mat-label>NACIONALIDAD</mat-label>
-                                <mat-select
-                                        formControlName="nacionalidad"
-                                        (selectionChange)="seleccionarPrefijo($event.value)"
-                                >
-                                    <mat-option
-                                            *ngFor="let item of listaNacionalidades"
-                                            [value]="item.codigo"
-                                    >
-                                        {{ item.nombre }}
-                                    </mat-option>
-                                </mat-select>
-                            </mat-form-field>
-
-                            <mat-form-field class="example-full-width">
-                                <input
-                                        type="text"
-                                        matInput
-                                        placeholder="TÉLEFONO"
-                                        formControlName="telefono"
-                                        required
-                                />
-
-                                <span matPrefix>{{ prefijoTelefono }}&nbsp;</span>
-                            </mat-form-field>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <div class="row">
-                        <div class="form-group">
-                            <button
-                                    mat-raised-button
-                                    type="button"
-                                    class="btn btn-primary"
-                                    (click)="confirmar()"
-                                    [disabled]="!form.valid"
+                            <mat-checkbox
+                                    class="example-margin"
+                                    formControlName="existencia"
+                            >EXISTENCIA</mat-checkbox
                             >
-                                Confirmar
-                            </button>
-                            <button
-                                    mat-raised-button
-                                    type="button"
-                                    class="btn btn-default btn-fill btn-wd"
-                                    (click)="cancelar()"
-                            >
-                                Cancelar
-                            </button>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="form-group">
+                    <button
+                            mat-raised-button
+                            type="button"
+                            class="btn btn-primary"
+                            (click)="confirmar()"
+                            [disabled]="!form.valid"
+                    >
+                        Confirmar
+                    </button>
+                    <button
+                            mat-raised-button
+                            type="button"
+                            class="btn btn-default btn-fill btn-wd"
+                            (click)="cancelar()"
+                    >
+                        Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
