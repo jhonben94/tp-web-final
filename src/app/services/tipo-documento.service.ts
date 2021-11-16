@@ -1,5 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { of } from "rxjs";
 import { environment } from "src/environments/environment";
 
 @Injectable({
@@ -26,7 +27,21 @@ export class TipoDocumentoService {
     return this.http.get(this.recurosBaseURL + id);
   }
   listarRecurso(ejemplo) {
-    return this.http.get(this.recurosBaseURL);
+    return of({
+      lista: [
+        {
+          idTipoDocumento: 1,
+          codigo: "CI",
+          descripcion: "CÉDULA DE IDENTIDAD",
+        },
+        {
+          idTipoDocumento: 1,
+          codigo: "RUC",
+          descripcion: "REGISTRO UNICO DEL CONTRIBUYENTE",
+        },
+      ],
+      total: 2,
+    });
 
     // return this.http.get(this.recurosBaseURL, { params: ejemplo });
   }

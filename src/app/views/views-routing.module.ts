@@ -25,35 +25,6 @@ export const routes: Routes = [
         path: "clientes/modificar/:id",
         component: ClientesEditComponent,
       },
-      {
-        path: "puntos",
-        component: PuntosComponent,
-      },
-      {
-        path: "puntos/agregar",
-        component: PuntosEditComponent,
-      },
-
-      {
-        path: "puntos/modificar/:id",
-        component: PuntosEditComponent,
-      },
-      {
-        path: "vencimiento-puntos",
-        component: VencimientoPuntosComponent,
-      },
-      {
-        path: "vencimiento-puntos/agregar",
-        component: VencimientoPuntosEditComponent,
-      },
-      {
-        path: "vencimiento-puntos/modificar/:id",
-        component: VencimientoPuntosEditComponent,
-      },
-      {
-        path: "bolsas",
-        component: BolsasComponent,
-      },
     ],
   },
 ];

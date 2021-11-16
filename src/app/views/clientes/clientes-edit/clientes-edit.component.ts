@@ -56,9 +56,9 @@ export class ClientesEditComponent implements OnInit {
         this.service.obtenerRecurso(this.id).subscribe((r: any) => {
           this.f.nombre.setValue(r.nombre);
           this.f.apellido.setValue(r.apellido);
-          this.f.fechaNacimiento.setValue(new Date(r.fechaNacimiento));
+          this.f.fechaNacimiento.setValue(r.fechaNacimiento);
           this.f.email.setValue(r.email);
-          this.f.idTipoDocumento.setValue(r.idTipoDocumento.idTipoDocumento);
+          this.f.idTipoDocumento.setValue(r.idTipoDocumento);
           this.f.nacionalidad.setValue(r.nacionalidad);
           this.seleccionarPrefijo(r.nacionalidad);
           this.f.documento.setValue(r.documento);
@@ -71,7 +71,7 @@ export class ClientesEditComponent implements OnInit {
   confirmar() {
     let valorForm = this.form.value;
 
-    valorForm.fechaNacimiento = formatearFecha(valorForm.fechaNacimiento);
+    //valorForm.fechaNacimiento = formatearFecha(valorForm.fechaNacimiento);
 
     console.log(valorForm);
 
@@ -90,6 +90,7 @@ export class ClientesEditComponent implements OnInit {
             })
             .then(() => {
               this.form.reset();
+              this.router.navigate(["/clientes"]);
             });
         },
         (err) => {

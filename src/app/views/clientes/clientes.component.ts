@@ -7,6 +7,7 @@ import {
   CANTIDAD_PAG_DEFAULT,
   CANTIDAD_PAG_LIST,
   deleteEmptyData,
+  formatearFecha,
 } from "../../utils";
 import { startWith, switchMap, catchError, map } from "rxjs/operators";
 import { ClientesService } from "src/app/services";
@@ -62,7 +63,6 @@ export class ClientesComponent implements OnInit {
     "apellido",
     "email",
     "telefono",
-    "idTipoDocumento",
     "documento",
     "fechaNacimiento",
     "accion",
@@ -108,13 +108,6 @@ export class ClientesComponent implements OnInit {
     },
 
     {
-      matDef: "idTipoDocumento",
-      label: "idTipoDocumento",
-      descripcion: "TIPO DOCUMENTO",
-      relacion: true,
-      columnaRelacion: "descripcion",
-    },
-    {
       matDef: "documento",
       label: "documento",
       descripcion: "NRO. DOCUMENTO",
@@ -123,6 +116,7 @@ export class ClientesComponent implements OnInit {
       matDef: "fechaNacimiento",
       label: "fechaNacimiento",
       descripcion: "FECHA NAC.",
+      fecha: true,
     },
   ];
   /**
@@ -178,7 +172,7 @@ export class ClientesComponent implements OnInit {
             orderBy: this.sort.active,
             orderDir: this.sort.direction,
             like: "S",
-            ejemplo: JSON.stringify(deleteEmptyData(this.filtrosForm.value)),
+            ejemplo: this.filtrosForm.value,
           };
           return this.service.listarRecurso(params);
         }),
@@ -260,6 +254,9 @@ export class ClientesComponent implements OnInit {
           ? columna.estados[0]
           : columna.estados[1];
         return label;
+      }
+      if (columna.fecha) {
+        return formatearFecha(new Date(row.fechaNacimiento));
       }
       return row[columna.label];
     }

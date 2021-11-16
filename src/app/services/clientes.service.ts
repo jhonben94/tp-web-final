@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { of } from "rxjs";
 import { map } from "rxjs/operators";
 import { environment } from "src/environments/environment";
 @Injectable({
@@ -7,34 +8,74 @@ import { environment } from "src/environments/environment";
 })
 export class ClientesService {
   recurosBaseURL: string = environment.URL_BASE + "listar_cliente.json";
-
+  idLocalStorage: string = "lista-clientes";
   constructor(private http: HttpClient) {}
   activarRecurso(id) {
     return this.http.put(this.recurosBaseURL + id + "/activar", {});
   }
 
   agregarRecurso(recurso) {
-    return this.http.post(this.recurosBaseURL, recurso);
+    var uniq = "id" + new Date().getTime();
+    recurso.idCliente = uniq;
+    let lista = JSON.parse(localStorage.getItem(this.idLocalStorage));
+    if (lista) {
+      lista.push(recurso);
+      localStorage.setItem(this.idLocalStorage, JSON.stringify(lista));
+    } else {
+      localStorage.setItem(this.idLocalStorage, JSON.stringify([recurso]));
+    }
+    return of(recurso);
   }
   modificarRecurso(recurso, id) {
-    return this.http.put(this.recurosBaseURL + id, recurso);
+    let lista = JSON.parse(localStorage.getItem(this.idLocalStorage));
+    recurso.idCliente = id;
+    lista = lista.filter((item) => item.idCliente != id);
+
+    lista.push(recurso);
+    localStorage.setItem(this.idLocalStorage, JSON.stringify(lista));
+    return of([]);
   }
   eliminarRecurso(id) {
-    return this.http.delete(this.recurosBaseURL + id);
+    let lista = JSON.parse(localStorage.getItem(this.idLocalStorage));
+    lista = lista.filter((item) => item.idCliente != id);
+    localStorage.setItem(this.idLocalStorage, JSON.stringify(lista));
+    return of([]);
   }
   obtenerRecurso(id) {
-    return this.http.get(this.recurosBaseURL).pipe(
-      map((r: any) => {
-        let lista = r.lista;
-
-        return lista.find((item) => item.idCliente == id);
-      })
-    );
+    let lista = JSON.parse(localStorage.getItem(this.idLocalStorage));
+    const cliente = lista.find((item) => item.idCliente == id);
+    return of(cliente);
     // return this.http.get(this.recurosBaseURL + id);
   }
   listarRecurso(ejemplo) {
-    return this.http.get(this.recurosBaseURL);
+    const lista = this.filtrarData(ejemplo);
 
+    return of(lista);
     // return this.http.get(this.recurosBaseURL, { params: ejemplo });
+  }
+
+  filtrarData(ejemplo: any) {
+    let lista: any[] = JSON.parse(localStorage.getItem(this.idLocalStorage));
+    let listaAux: [] = [];
+
+    Object.entries(ejemplo.ejemplo).forEach(([key, value]) => {
+      if (value && value != "") {
+        console.log("filtrado", value, key);
+
+        const filtrado: any[] = lista.filter((item: any) =>
+          item[key].includes(value)
+        );
+        lista = filtrado;
+      }
+    });
+
+    const data = {
+      lista: this.pagination(lista, ejemplo.cantidad, ejemplo.inicio),
+      totalDatos: lista.length,
+    };
+    return data;
+  }
+  pagination(lista: any[], pageSize, pageStart) {
+    return lista.slice(pageStart, pageStart + pageSize);
   }
 }
