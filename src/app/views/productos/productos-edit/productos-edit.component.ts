@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
-import { ClientesService, TipoDocumentoService } from "src/app/services";
+import {ProductosService, TipoDocumentoService} from 'src/app/services';
 import { OtrosService } from "src/app/services/otros.service";
 import { formatearFecha } from "src/app/utils";
 import swal from "sweetalert2";
@@ -23,7 +23,7 @@ export class ProductosEditComponent implements OnInit {
   listaNacionalidades: any[];
   constructor(
       private fb: FormBuilder,
-      private service: ClientesService,
+      private service: ProductosService,
       private tipoDocumentoService: TipoDocumentoService,
       private nacionalidadService: OtrosService,
       private route: ActivatedRoute,
@@ -31,13 +31,9 @@ export class ProductosEditComponent implements OnInit {
   ) {
     this.form = this.fb.group({
       nombre: ["", Validators.required],
-      apellido: ["", Validators.required],
-      email: ["", [Validators.required, Validators.email]],
-      telefono: ["", Validators.required],
-      nacionalidad: ["", Validators.required],
-      documento: ["", Validators.required],
-      idTipoDocumento: ["", Validators.required],
-      fechaNacimiento: ["", Validators.required],
+      codigo: ["", Validators.required],
+      precioVenta: ["", Validators.required],
+      existencia: [""],
     });
   }
 
@@ -45,7 +41,7 @@ export class ProductosEditComponent implements OnInit {
     this.id = this.route.snapshot.paramMap.get("id");
     if (this.id) {
       this.titulo = "MODIFICAR PRODUCTO";
-      //obtener datos de la persona.
+      //obtener datos del producto.
       // settear en el formulario.
     } else {
       this.titulo = "AGREGAR PRODUCTO";
@@ -57,14 +53,9 @@ export class ProductosEditComponent implements OnInit {
 
         this.service.obtenerRecurso(this.id).subscribe((r: any) => {
           this.f.nombre.setValue(r.nombre);
-          this.f.apellido.setValue(r.apellido);
-          this.f.fechaNacimiento.setValue(r.fechaNacimiento);
-          this.f.email.setValue(r.email);
-          this.f.idTipoDocumento.setValue(r.idTipoDocumento);
-          this.f.nacionalidad.setValue(r.nacionalidad);
-          this.seleccionarPrefijo(r.nacionalidad);
-          this.f.documento.setValue(r.documento);
-          this.f.telefono.setValue(r.telefono);
+            this.f.existencia.setValue(res.existencia == "S" ? true : false);
+          this.f.codigo.setValue(r.codigo);
+          this.f.precioVenta.setValue(r.precioVenta);
         });
       });
     });
@@ -92,7 +83,7 @@ export class ProductosEditComponent implements OnInit {
                 })
                 .then(() => {
                   this.form.reset();
-                  this.router.navigate(["/clientes"]);
+                  this.router.navigate(["/productos"]);
                 });
           },
           (err) => {
@@ -140,7 +131,7 @@ export class ProductosEditComponent implements OnInit {
   }
 
   cancelar() {
-    this.router.navigate(["/clientes"]);
+    this.router.navigate(["/productos"]);
   }
   seleccionarPrefijo(codigo) {
     let pais = this.listaNacionalidades.find((x) => x.codigo == codigo);
