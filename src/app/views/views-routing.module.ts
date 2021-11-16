@@ -7,6 +7,8 @@ import { PuntosEditComponent } from "./puntos/puntos-edit/puntos-edit.component"
 import { PuntosComponent } from "./puntos/puntos.component";
 import { VencimientoPuntosEditComponent } from "./vencimiento-puntos/vencimiento-puntos-edit/vencimiento-puntos-edit.component";
 import { VencimientoPuntosComponent } from "./vencimiento-puntos/vencimiento-puntos.component";
+import {ProductosComponent} from './productos/productos.component';
+import { ProductosEditComponent } from "./productos/productos-edit/productos-edit.component";
 
 export const routes: Routes = [
   {
@@ -24,6 +26,19 @@ export const routes: Routes = [
       {
         path: "clientes/modificar/:id",
         component: ClientesEditComponent,
+      },
+      {
+        path: "productos",
+        component: ProductosComponent,
+      },
+      {
+        path: "productos/agregar",
+        component: ProductosEditComponent,
+      },
+
+      {
+        path: "productos/modificar/:id",
+        component: ProductosEditComponent,
       },
     ],
   },

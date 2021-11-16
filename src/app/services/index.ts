@@ -7,3 +7,5 @@ export { PuntosService } from "./puntos.service";
 export { TipoDocumentoService } from "./tipo-documento.service";
 
 export { ClientesService } from "./clientes.service";
+
+export { ProductosService } from "./productos.service";

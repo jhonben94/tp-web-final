@@ -28,6 +28,12 @@ export const ROUTES: RouteInfo[] = [
     type: "link",
     icontype: "people",
   },
+  {
+    path: "/productos",
+    title: "Productos",
+    type: "link",
+    icontype: "production_quantity_limits",
+  },
 ];
 @Component({
   selector: "app-sidebar-cmp",
