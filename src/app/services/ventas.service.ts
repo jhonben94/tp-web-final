@@ -84,6 +84,6 @@ export class VentasService {
       localStorage.setItem(this.idNroFactura, JSON.stringify(100000000));
       nroFactura = 100000000;
     }
-    return nroFactura;
+    return nroFactura + 1;
   }
 }

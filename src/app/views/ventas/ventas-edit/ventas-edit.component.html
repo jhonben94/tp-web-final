@@ -21,7 +21,6 @@
                   placeholder="Fecha"
                   formControlName="fecha"
                   (click)="picker.open()"
-                  [disabled]="true"
                 />
                 <mat-datepicker-toggle
                   matSuffix
@@ -32,7 +31,6 @@
 
               <mat-form-field class="example-full-width">
                 <input
-                  [disabled]="true"
                   type="number"
                   matInput
                   placeholder="NRO FACTURA"
@@ -147,6 +145,7 @@
                 color="primary"
                 aria-label="Example icon button with a bookmark icon"
                 (click)="addRow()"
+                [disabled]="!formDetalle.valid"
               >
                 <mat-icon>add_shopping_cart</mat-icon>
               </button>
@@ -196,11 +195,6 @@
                 >cancel</mat-icon
               >
             </button>
-            <!-- <button ngbTooltip="Activar" mat-button>
-                                                                <mat-icon color="accent" data-action-type="activar"
-                                                                  >check_circle</mat-icon
-                                                                >
-                                                              </button> -->
           </td>
         </ng-container>
 
@@ -211,6 +205,31 @@
           (click)="acciones(row, $event)"
         ></tr>
       </table>
+
+      <div class="card-footer">
+        <div class="row"></div>
+        <div class="row">
+          <div class="form-group">
+            <button
+              mat-raised-button
+              type="button"
+              class="btn btn-primary"
+              (click)="confirmar()"
+              [disabled]="!form.valid && !(data.length > 0)"
+            >
+              Confirmar
+            </button>
+            <button
+              mat-raised-button
+              type="button"
+              class="btn btn-default btn-fill btn-wd"
+              (click)="cancelar()"
+            >
+              Cancelar
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

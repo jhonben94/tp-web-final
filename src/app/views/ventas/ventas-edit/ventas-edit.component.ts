@@ -115,13 +115,10 @@ export class VentasEditComponent implements OnInit {
   ) {
     this.form = this.fb.group({
       nroFactura: ["", Validators.required],
-      fecha: [""],
+      fecha: ["", Validators.required],
       idCliente: ["", Validators.required],
       nombreCliente: [""],
-
-      idProducto: ["", Validators.required],
       total: [0, Validators.required],
-      nombreProducto: [""],
     });
 
     this.formDetalle = this.fb.group({
@@ -151,13 +148,15 @@ export class VentasEditComponent implements OnInit {
       this.titulo = "GENERAR VENTA";
       this.f.fecha.setValue(new Date());
       this.f.nroFactura.setValue(this.service.obtenerNroFactura());
+      console.log(!this.form.valid, this.form.value);
     }
   }
 
   confirmar() {
     let valorForm = this.form.value;
+    console.log(valorForm);
 
-    if (this.id) {
+    /*  if (this.id) {
       this.service.modificarRecurso(valorForm, this.id).subscribe(
         (res) => {
           swal
@@ -215,7 +214,7 @@ export class VentasEditComponent implements OnInit {
           });
         }
       );
-    }
+    } */
   }
 
   cancelar() {
@@ -240,7 +239,6 @@ export class VentasEditComponent implements OnInit {
         });
 
         dialogRef.afterClosed().subscribe((result: any) => {
-          console.log(result);
           if (result) {
             this.f.nombreCliente.setValue(
               result.nombre + " " + result.apellido
@@ -275,8 +273,6 @@ export class VentasEditComponent implements OnInit {
   }
 
   changeAmountDetail(newValue) {
-    console.log("onchage");
-
     const cant = newValue;
     const precio = this.fd.precio.value ? this.fd.precio.value : 0;
     this.fd.subtotal.setValue(cant * precio);
@@ -304,19 +300,13 @@ export class VentasEditComponent implements OnInit {
           .then((result) => {
             if (result.value) {
               let lista = this.data.slice(0);
-              console.log(
-                lista.filter((item) => item.idProducto != this.selectedRow[id])
-              );
-
               this.data = lista.filter(
                 (item) => item.idProducto != this.selectedRow[id]
               );
             }
           });
         break;
-      case "editar":
-        this.router.navigate(["vencimiento-puntos/modificar", data[id]]);
-        break;
+
       default:
         break;
     }
@@ -331,6 +321,8 @@ export class VentasEditComponent implements OnInit {
     const total = this.f.total.value;
     const subtotal = detalle.cantidad * detalle.precio;
     this.f.total.setValue(total + subtotal);
+
+    console.log(!this.form.valid);
   }
   onRowClicked(row) {
     this.selectedRow = row;
