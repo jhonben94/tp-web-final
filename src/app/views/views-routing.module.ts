@@ -9,6 +9,8 @@ import { VencimientoPuntosEditComponent } from "./vencimiento-puntos/vencimiento
 import { VencimientoPuntosComponent } from "./vencimiento-puntos/vencimiento-puntos.component";
 import { VentasEditComponent } from "./ventas/ventas-edit/ventas-edit.component";
 import { VentasComponent } from "./ventas/ventas.component";
+import {ProductosComponent} from './productos/productos.component';
+import { ProductosEditComponent } from "./productos/productos-edit/productos-edit.component";
 
 export const routes: Routes = [
   {
@@ -39,6 +41,19 @@ export const routes: Routes = [
       {
         path: "ventas/ver/:id",
         component: VentasEditComponent,
+      },
+      {
+        path: "productos",
+        component: ProductosComponent,
+      },
+      {
+        path: "productos/agregar",
+        component: ProductosEditComponent,
+      },
+
+      {
+        path: "productos/modificar/:id",
+        component: ProductosEditComponent,
       },
     ],
   },

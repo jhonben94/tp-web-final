@@ -34,6 +34,12 @@ export const ROUTES: RouteInfo[] = [
     type: "link",
     icontype: "credit_score",
   },
+  {
+    path: "/productos",
+    title: "Productos",
+    type: "link",
+    icontype: "production_quantity_limits",
+  },
 ];
 @Component({
   selector: "app-sidebar-cmp",

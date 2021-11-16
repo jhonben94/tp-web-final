@@ -18,6 +18,9 @@ import { BuscadorClienteComponent } from './buscadores/buscador-cliente/buscador
 import { BolsasComponent } from './bolsas/bolsas.component';
 import { VentasComponent } from './ventas/ventas.component';
 import { VentasEditComponent } from './ventas/ventas-edit/ventas-edit.component';
+import { ProductosComponent } from './productos/productos.component';
+import { ProductosEditComponent } from './productos/productos-edit/productos-edit.component';
+import { BuscadorProductoComponent } from './buscadores/buscador-producto/buscador-producto.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { VentasEditComponent } from './ventas/ventas-edit/ventas-edit.component'
     BolsasComponent,
     VentasComponent,
     VentasEditComponent,
+    ProductosComponent,
+    ProductosEditComponent,
+    BuscadorProductoComponent,
   ],
   imports: [
     CommonModule,

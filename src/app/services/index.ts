@@ -1,3 +1,5 @@
+export { ProductosService } from "./productos.service";
+
 export { VentasService } from "./ventas.service";
 
 export { BolsasService } from "./bolsas.service";

@@ -55,12 +55,9 @@ export class ProductosService {
 
   filtrarData(ejemplo: any) {
     let lista: any[] = JSON.parse(localStorage.getItem(this.idLocalStorage));
-    let listaAux: [] = [];
 
     Object.entries(ejemplo.ejemplo).forEach(([key, value]) => {
       if (value && value != "") {
-        console.log("filtrado", value, key);
-
         const filtrado: any[] = lista.filter((item: any) =>
           item[key].includes(value)
         );
