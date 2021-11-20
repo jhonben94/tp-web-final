@@ -99,6 +99,7 @@ export class VentasComponent implements OnInit {
       matDef: "nroFactura",
       label: "nroFactura",
       descripcion: "NRO FACTURA",
+      factura: true,
     },
     {
       matDef: "total",
@@ -250,18 +251,14 @@ export class VentasComponent implements OnInit {
       if (columna.fecha) {
         return formatearFecha(new Date(row.fecha));
       }
-      /*   if (columna.cliente) {
-        this.clieService.obtenerRecurso(row[columna]).subscribe(
-          (resp: any) => {
-            console.log(resp);
-
-            return resp.nombre + " " + resp.apellido;
-          },
-          (err) => {
-            return "";
-          }
-        );
-      } */
+      if (columna.factura) {
+        return row.prefijoFactura + " " + row.nroFactura;
+      }
+      if (columna.cliente) {
+        let lista = JSON.parse(localStorage.getItem("lista-clientes"));
+        const cliente = lista.find((item) => item.idCliente == row.idCliente);
+        return cliente.nombre + "  " + cliente.apellido;
+      }
 
       return row[columna.label];
     }

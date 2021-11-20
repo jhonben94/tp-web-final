@@ -40,6 +40,17 @@ export const ROUTES: RouteInfo[] = [
     type: "link",
     icontype: "production_quantity_limits",
   },
+  {
+    path: "/reporte",
+    title: "Reportes",
+    type: "sub",
+    icontype: "apps",
+    collapse: "components",
+    children: [
+      { path: "resumido", title: "Ventas Resumido", ab: "B" },
+      { path: "detallado", title: "Ventas Detallado", ab: "GS" },
+    ],
+  },
 ];
 @Component({
   selector: "app-sidebar-cmp",
