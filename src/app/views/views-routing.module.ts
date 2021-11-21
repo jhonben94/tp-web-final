@@ -63,7 +63,7 @@ export const routes: Routes = [
         component: ReporteResumidoComponent,
       },
       {
-        path: "reporte/detallado",
+        path: "reporte/detallado/:idVenta",
         component: ReporteExtendidoComponent,
       },
     ],
