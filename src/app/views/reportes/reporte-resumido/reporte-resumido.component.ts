@@ -141,7 +141,7 @@ export class ReporteResumidoComponent implements OnInit {
   ngAfterViewInit() {
     // Si se cambia el orden, se vuelve a la primera pag.
     this.sort.sortChange.subscribe(() => (this.paginator.pageIndex = 0));
-    //this.buscar();
+    this.buscar();
   }
 
   get f() {
@@ -310,6 +310,7 @@ export class ReporteResumidoComponent implements OnInit {
   }
 
   downloadPdf() {
+    console.log(this.data, this.listaColumnas)
     this.exportarService.exportPdf(this.data, this.listaColumnas);
   }
   downloadExcel() {
@@ -324,5 +325,9 @@ export class ReporteResumidoComponent implements OnInit {
       lista.push(tempObj);
     }
     this.exportarService.exportExcel(lista, "excel");
+  }
+
+  onRowClicked(row) {
+    this.router.navigateByUrl("/reporte/detallado/" + row.idVenta);
   }
 }
